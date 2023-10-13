@@ -1,0 +1,131 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    <script src="https://raw.githack.com/fcor/arjs-gestures/master/dist/gestures.js"></script>
+    <script type="module" src="app.js"></script>
+  </head>
+  <body style="position: relative">
+    <video
+      style="
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 0;
+        height: 100vh;
+        width: 100vw;
+      "
+      muted
+      id="cameraEl"
+      src="stream"
+      playsinline
+      autoplay
+    ></video>
+    <a-scene
+      arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
+      embedded
+      renderer="logarithmicDepthBuffer: true;"
+      vr-mode-ui="enabled: false"
+      gesture-detector
+      id="scene"
+    >
+      <a-assets>
+        <!-- Credit to Poly by Google for the model: https://poly.google.com/view/5ZMAz7_ucTn -->
+        <!-- <a-asset-item id="sandCastleModel" src="assets/sand-castle.glb"></a-asset-item> -->
+        <a-asset-item
+          id="houseMainFrame"
+          src="assets/ar/House_Main_Frame.glb"
+        ></a-asset-item>
+        <a-asset-item
+          id="houseMainFrameRoof"
+          src="assets/ar/House_Main_Frame_Roof.glb"
+        ></a-asset-item>
+        <a-asset-item
+          id="northPoleBase"
+          src="assets/ar/NorthPole_Base.glb"
+        ></a-asset-item>
+        <a-asset-item
+          id="treeTopBase"
+          src="assets/ar/TreeTop_Base.glb"
+        ></a-asset-item>
+        <a-asset-item
+          id="door"
+          src="assets/ar/Door_Rectangular.glb"
+        ></a-asset-item>
+        <a-asset-item id="roof" src="assets/ar/Solid_Roof.glb"></a-asset-item>
+        <a-asset-item
+          id="windows"
+          src="assets/ar/Square_Windows.glb"
+        ></a-asset-item>
+        <a-asset-item
+          id="candy-cane"
+          src="assets/ar/Candy_Cane.glb"
+        ></a-asset-item>
+        <a-asset-item id="chimney" src="assets/ar/Chimney.glb"></a-asset-item>
+        <a-asset-item
+          id="fudge-cone"
+          src="assets/ar/Fudge_Cone.glb"
+        ></a-asset-item>
+        <a-asset-item
+          id="fudge-tree"
+          src="assets/ar/Fudge_Tree.glb"
+        ></a-asset-item>
+        <a-asset-item
+          id="gum-drops"
+          src="assets/ar/GumDrops.glb"
+        ></a-asset-item>
+        <a-asset-item
+          id="sign-snow"
+          src="assets/ar/Keebler_Sign_Snow.glb"
+        ></a-asset-item>
+        <a-asset-item
+          id="cookie-chocolate"
+          src="assets/ar/MM_Cookie_Chocolate.glb"
+        ></a-asset-item>
+        <a-asset-item
+          id="cookie-regular"
+          src="assets/ar/MM_Cookie_Regular.glb"
+        ></a-asset-item>
+        <a-asset-item
+          id="snowballs"
+          src="assets/ar/Snowballs.glb"
+        ></a-asset-item>
+        <a-asset-item id="wreath" src="assets/ar/Wreath.glb"></a-asset-item>
+        <a-asset-item id="buddy" src="assets/ar/Buddy.glb"></a-asset-item>
+        <a-asset-item id="elf-2" src="assets/ar/Elf_2.glb"></a-asset-item>
+        <a-asset-item id="elf-3" src="assets/ar/Elf_3.glb"></a-asset-item>
+        <a-asset-item id="ernie" src="assets/ar/Ernie.glb"></a-asset-item>
+        <a-asset-item id="jovi" src="assets/ar/Jovi.glb"></a-asset-item>
+        <a-asset-item id="narwhal" src="assets/ar/Narwhal.glb"></a-asset-item>
+        <a-asset-item id="puffin" src="assets/ar/Puffin.glb"></a-asset-item>
+      </a-assets>
+
+      <a-entity
+        id="model-container"
+        class="cantap"
+        scale="0.5 0.5 0.5"
+        position="0 0.8 -0.1"
+      >
+        <!-- <a-entity position="0 1.5 -0.3" gltf-model="#northPoleBase"></a-entity>
+        <a-entity
+          position="0 1.5 -0.3"
+          gltf-model="#houseMainFrameRoof"
+        ></a-entity>
+        <a-entity position="0 1.5 -0.3" gltf-model="#roof"></a-entity>
+        <a-entity position="0 1.5 -0.3" gltf-model="#windows"></a-entity>
+        <a-entity position="0 1.5 -0.3" gltf-model="#candy-cane"></a-entity>
+        <a-entity position="0 1.5 -0.3" gltf-model="#chimney"></a-entity>
+        <a-entity position="0 1.5 -0.3" gltf-model="#fudge-cone"></a-entity>
+        <a-entity position="0 1.5 -0.2" gltf-model="#fudge-tree"></a-entity>
+        <a-entity position="0 1.5 -0.3" gltf-model="#gum-drops"></a-entity>
+        <a-entity position="0 1.5 -0.3" gltf-model="#sign-snow"></a-entity>
+        <a-entity
+          position="0 1.5 -0.85"
+          gltf-model="#cookie-chocolate"
+        ></a-entity>
+        <a-entity position="0 1.5 -0.3" gltf-model="#cookie-regular"></a-entity>
+        <a-entity position="0 1.5 -0.3" gltf-model="#snowballs"></a-entity> -->
+        <a-camera></a-camera>
+      </a-entity>
+    </a-scene>
+  </body>
+</html>
