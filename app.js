@@ -45,6 +45,13 @@ function AddModelsFromUrl() {
   el.setAttribute("position", "0 1.5 -0.3");
   entityContainer.appendChild(el);
 
+  if (houseId == 2) {
+    const base = document.createElement("a-entity");
+    base.setAttribute("gltf-model", "assets/ar/NorthPole_Base.glb");
+    base.setAttribute("position", "0 1.5 -0.3");
+    entityContainer.appendChild(base);
+  }
+
   params.forEach((value, key) => {
     console.log(key, value);
     if (key !== "step" && key !== "houseId") {
@@ -75,6 +82,12 @@ function AddModelsFromUrl() {
             // el.object3D.rotation.y = THREE.MathUtils.degToRad(45);
           } else {
             el.setAttribute("position", "0 1.5 -0.3");
+          }
+
+          if (optionSelected.rotation) {
+            const { x = 0, y = 0, z = 0 } = optionSelected.rotation;
+            // el.setAttribute("rotation", { x, y, z });
+            el.object3D.rotation.y = THREE.MathUtils.degToRad(y);
           }
 
           entityContainer.appendChild(el);

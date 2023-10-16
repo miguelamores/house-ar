@@ -47,6 +47,11 @@ export const thumbnails = {
       },
       {
         model: "assets/ar/Chimney.glb",
+        position: {
+          1: { x: 0.3, y: 1.5, z: -0.1 },
+          2: { x: 0.005, y: 1.51, z: -0.34 },
+        },
+        rotation: { y: 180 },
       },
     ],
   },
@@ -54,26 +59,30 @@ export const thumbnails = {
     options: [
       {
         model: "assets/ar/Fudge_Cone.glb",
+        position: {
+          1: { x: 0, y: 1.5, z: -0.2 },
+          2: { x: -0.22, y: 1.5, z: -0.31 },
+        },
       },
       {
         model: "assets/ar/Fudge_Tree.glb",
         position: {
           1: { x: 0, y: 1.5, z: -0.2 },
-          2: { x: 0, y: 1.5, z: -0.2 },
+          2: { x: -0.08, y: 1.52, z: -0.23 },
         },
       },
       {
         model: "assets/ar/MM_Cookie_Regular.glb",
         position: {
           1: { x: 0, y: 1.5, z: -0.2 },
-          2: { x: 0, y: 1.5, z: -0.2 },
+          2: { x: -0.15, y: 1.5, z: -0.3 },
         },
       },
       {
         model: "assets/ar/Snowballs.glb",
         position: {
           1: { x: 0, y: 1.5, z: -0.2 },
-          2: { x: 0, y: 1.5, z: -0.2 },
+          2: { x: 0.01, y: 1.5, z: -0.29 },
         },
       },
       {
@@ -91,21 +100,21 @@ export const thumbnails = {
         model: "assets/ar/Ernie.glb",
         position: {
           1: { x: 0, y: 1.5, z: -0.2 },
-          2: { x: 0, y: 1.5, z: -0.2 },
+          2: { x: 0.04, y: 1.5, z: -0.22 },
         },
       },
       {
         model: "assets/ar/Elf_2.glb",
         position: {
           1: { x: 0, y: 0, z: 0 },
-          2: { x: 0, y: 1.5, z: -0.2 },
+          2: { x: 0.04, y: 1.5, z: -0.22 },
         },
       },
       {
         model: "assets/ar/Elf_3.glb",
         position: {
           1: { x: 0, y: 0, z: 0 },
-          2: { x: 0, y: 1.5, z: -0.2 },
+          2: { x: 0.04, y: 1.5, z: -0.22 },
         },
       },
     ],
