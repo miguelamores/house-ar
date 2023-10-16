@@ -42,8 +42,18 @@ function AddModelsFromUrl() {
 
   const el = document.createElement("a-entity");
   el.setAttribute("gltf-model", base_house[houseId]);
-  el.setAttribute("position", "0 1.5 -0.3");
+  houseId == 1
+    ? el.setAttribute("position", "0 1.33 -0.3")
+    : el.setAttribute("position", "0 1.5 -0.3");
+  // el.setAttribute("position", "0 1.3 -0.3");
   entityContainer.appendChild(el);
+
+  if (houseId == 1) {
+    const base = document.createElement("a-entity");
+    base.setAttribute("gltf-model", base_house[2]);
+    base.setAttribute("position", "0 1.5 -0.3");
+    entityContainer.appendChild(base);
+  }
 
   if (houseId == 2) {
     const base = document.createElement("a-entity");
