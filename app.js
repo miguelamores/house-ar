@@ -14,10 +14,6 @@ function showCamera() {
       cameraEl.play();
       cameraEl.muted = true;
       cameraEl.volume = 0;
-      // cameraEl.onloadedmetadata = (e) => {
-      //   cameraEl.muted = false;
-      //   cameraEl.volume = 1;
-      // };
     })
     .catch((err) => {
       console.log({ err });
@@ -142,5 +138,5 @@ function AddModelsFromUrl() {
   //   });
 }
 
-showCamera();
+// showCamera();
 AddModelsFromUrl();
