@@ -37,7 +37,10 @@ export const thumbnails = {
   additions: {
     options: [
       {
-        model: "assets/ar/Keebler_Sign_Snow.glb",
+        model: [
+          "assets/ar/Keebler_Sign_Tree.glb",
+          "assets/ar/Keebler_Sign_Snow.glb",
+        ],
       },
       {
         model: "assets/ar/Wreath.glb",

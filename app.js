@@ -36,7 +36,7 @@ function getThumbnailKeyName() {
 function AddModelsFromUrl() {
   const querystring = window.location.search;
   const params = new URLSearchParams(querystring);
-  const houseId = params.get("houseId");
+  const houseId = Number(params.get("houseId"));
   const sceneEl = document.querySelector("a-scene");
   const entityContainer = sceneEl.querySelector("#model-container");
 
@@ -85,7 +85,9 @@ function AddModelsFromUrl() {
         parsedValues.forEach((value) => {
           const el = document.createElement("a-entity");
           const optionSelected = thumbnails[key].options[value];
-          el.setAttribute("gltf-model", optionSelected.model);
+          Array.isArray(optionSelected.model)
+            ? el.setAttribute("gltf-model", optionSelected.model[houseId - 1])
+            : el.setAttribute("gltf-model", optionSelected.model);
           if (optionSelected.position) {
             const { x, y, z } = optionSelected.position[houseId];
             el.setAttribute("position", { x, y, z });
