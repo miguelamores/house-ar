@@ -24,11 +24,12 @@
       autoplay
     ></video> -->
     <a-scene
-      webxr="overlayElement:#dom-overlay;optionalFeatures: hit-test;"
+      webxr="overlayElement:#dom-overlay;"
       ar-hit-test="target:#model-container;type:footprint;footprintDepth:0.2;"
+      ar-cursor
+      raycaster="objects: #model-container *"
       embedded
       arjs
-      gesture-detector
       id="scene"
     >
       <a-assets>
@@ -101,9 +102,9 @@
         <a-asset-item id="narwhal" src="assets/ar/Narwhal.glb"></a-asset-item>
         <a-asset-item id="puffin" src="assets/ar/Puffin.glb"></a-asset-item>
       </a-assets>
-
+      <a-camera scale="0.5 0.5 0.5"></a-camera>
       <a-entity
-        gesture-handler="minScale: 0.3; maxScale: 8; rotationFactor: 5;"
+        hide-on-hit-test-start
         id="model-container"
         class="cantap"
         scale="0.5 0.5 0.5"
@@ -128,7 +129,6 @@
         ></a-entity>
         <a-entity position="0 1.5 -0.3" gltf-model="#cookie-regular"></a-entity>
         <a-entity position="0 1.5 -0.3" gltf-model="#snowballs"></a-entity> -->
-        <a-camera></a-camera>
       </a-entity>
     </a-scene>
 
