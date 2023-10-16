@@ -130,6 +130,32 @@
         <a-asset-item id="puffin" src="assets/ar/Puffin.glb"></a-asset-item>
       </a-assets>
       <a-camera scale="0.5 0.5 0.5"></a-camera>
+      <a-light
+        id="dirlight"
+        auto-shadow-cam
+        intensity="0.7"
+        light="castShadow:true;type:directional"
+        position="10 10 10"
+      ></a-light>
+      <a-light
+        hide-on-enter-ar
+        intensity="0.3"
+        light="type:hemisphere;color:yellow;groundColor:blue;"
+        position="10 10 10"
+      ></a-light>
+
+      <a-entity
+        hide-on-enter-ar
+        environment="lighting:none;shadow:true;"
+      ></a-entity>
+      <a-entity
+        material="shader:shadow; depthWrite:false; opacity:0.9;"
+        visible="false"
+        geometry="primitive:shadow-plane;"
+        shadow="cast:false;receive:true;"
+        ar-shadow-helper="target:#my-objects;light:#dirlight;"
+      ></a-entity>
+
       <a-entity
         hide-on-hit-test-start
         id="model-container"
