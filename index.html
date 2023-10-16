@@ -54,11 +54,11 @@
     <a-scene
       webxr="overlayElement:#dom-overlay;"
       ar-hit-test="target:#model-container;type:footprint;footprintDepth:0.2;"
-      ar-cursor
       raycaster="objects: #model-container *"
-      embedded
-      arjs
       id="scene"
+      background="color:skyblue;"
+      reflection="directionalLight:#dirlight;"
+      shadow="type: pcfsoft"
     >
       <a-assets>
         <!-- Credit to Poly by Google for the model: https://poly.google.com/view/5ZMAz7_ucTn -->
@@ -134,7 +134,6 @@
       <a-entity
         hide-on-hit-test-start
         id="model-container"
-        class="cantap"
         scale="0.5 0.5 0.5"
         position="0 0.8 -0.1"
       >
