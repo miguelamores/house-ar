@@ -1,4 +1,4 @@
-import { DEFAULT_THUMBNAILS, thumbnails, base_house } from "./thumbnails.js";
+import { thumbnails, base_house } from "./thumbnails.js";
 
 function showCamera() {
   navigator.mediaDevices
@@ -18,15 +18,6 @@ function showCamera() {
     .catch((err) => {
       console.log({ err });
     });
-}
-
-function getThumbnailKeyName() {
-  const thumbnail = {};
-  for (const key in DEFAULT_THUMBNAILS) {
-    thumbnail[DEFAULT_THUMBNAILS[key].name] = Number(key);
-  }
-
-  return thumbnail;
 }
 
 function AddModelsFromUrl() {
